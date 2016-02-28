@@ -1,0 +1,268 @@
+<!DOCTYPE html><html><head>
+    <title>Embla.io</title>
+    <script async="" src="main.dart.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="grid">
+    <header class="header">
+      <div class="grid__container header__container">
+        <a href="/" class="header__logo"><img src="img/logo.svg" alt="Embla"></a>
+        <!--
+        Menu will be added later
+
+        <ul class="menu">
+          <li><a href="/api" class="menu__item">API</a></li>
+          <li><a href="/docs" class="menu__item">DOCS</a></li>
+        </ul>
+        -->
+        <div class="header__space"></div>
+        <div class="header__github">
+          <div class="header__github__bubble">
+            0
+          </div>
+          <a href="https://github.com/emilniklas/embla">
+            <img src="img/github.svg" alt="Embla on GitHub">
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="front-page">
+      <div class="front-page__copy">
+        <h1>Easy-to-use server&nbsp;side framework for&nbsp;Dart</h1>
+        <p>Nothing complicated.</p>
+      </div>
+      <code class="front-page__code">
+        <div class="front-page__code__line">
+          <span class="front-page__code__keyword">get</span>
+          embla
+          <span class="front-page__code__punc">=&gt; [</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                Instead of a "main" function, Embla requires an "embla" getter in the script, that
+                returns a list of Bootstrappers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line">
+          &nbsp;
+          <span class="front-page__code__keyword">new</span>
+          HttpBootstrapper<span class="front-page__code__punc">(</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                Bootstrappers are plugins to the application. Out of the box, Embla comes with an
+                HTTP specific one.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line">
+          &nbsp;
+          &nbsp;
+          pipeline<span class="front-page__code__punc">:</span>
+          pipe<span class="front-page__code__punc">(</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                The HTTP bootstrapper has a "pipeline" parameter, representing the HTTP pipeline.
+              </p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="front-page__code__line on-add-middleware">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <span class="front-page__code__punc">// Middleware</span>
+        </div>
+        <div class="front-page__code__line on-add-middleware">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          RemoveTrailingSlashMiddleware<span class="front-page__code__punc">,</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                This middleware redirects all requests that have a trailing slash (like /about/)
+                to the corresponding url without the slash (/about).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line on-add-middleware">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          LoggerMiddleware<span class="front-page__code__punc">,</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                This middleware logs all requests to the terminal along with some statistics and
+                a timestamp.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line on-add-middleware">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          ErrorHandlerMiddleware<span class="front-page__code__punc">,</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                This middleware handles all errors thrown in the route handlers or subsequent
+                middleware. You can also add handlers for specific types of exceptions, like
+                HttpNotFoundException.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line on-add-middleware">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          InputParserMiddleware<span class="front-page__code__punc">,</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                This middleware parses the body of the requests and saves it to an "Input" object,
+                which can then be injected in the route handlers, by the Dependency Injection system.
+              </p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="front-page__code__line on-add-routes">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <span class="front-page__code__punc">// Routes</span>
+        </div>
+        <div class="front-page__code__line on-add-routes">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          Route<span class="front-page__code__punc">.</span>all<span class="front-page__code__punc">(</span><span class="front-page__code__string">'auth/*'</span><span class="front-page__code__punc">,</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                A route is a middleware that creates a fork in the pipeline. All requests that start
+                with "/auth" now flows through this new pipeline. If it doesn't find any matching
+                handler within it will be passed on the the "Hello, world!" handler below.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line on-add-routes">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          AuthController
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                Controllers, just like routes, are middleware too. They contain collections of
+                routes, which they map to methods with special annotations.
+              </p>
+              <p>
+                Since this "AuthController" is routed to the "auth/*" namespace, all controller
+                routes will be relative to that prefix.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line on-add-routes">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <span class="front-page__code__punc">),</span>
+          <br><br>
+        </div>
+        <div class="front-page__code__line on-add-routes">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          Route<span class="front-page__code__punc">.</span>get<span class="front-page__code__punc">(</span><span class="front-page__code__string">'about'</span><span class="front-page__code__punc">,</span>
+          <span class="front-page__code__punc">() =&gt;</span> <span class="front-page__code__string">'About page!'</span><span class="front-page__code__punc">),</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                Routes can specify the method it requires. This one only matches GET requests.
+              </p>
+              <p>
+                Routes that doesn't end with an asterisk requires the URL to match exactly. Requests
+                to the URL "about/something-else" would fall through to the "Hello, world!" handler.
+              </p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="front-page__code__line on-add-routes">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <span class="front-page__code__punc">// Fallback handler</span>
+        </div>
+        <div class="front-page__code__line">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <span class="front-page__code__punc">() =&gt;</span>
+          <span class="front-page__code__string">'Hello, world!'</span>
+          <div class="code-hint">
+            <button class="code-hint__button">?</button>
+            <div class="code-hint__pop-up">
+              <p>
+                </p><div class="on-no-routes on-no-middleware">
+                  A simple pipeline containing a single handler that will respond to every
+                  request—Hello world!
+                </div>
+                <div class="on-add-routes on-add-middleware">
+                  All requests that doesn't get a response from middleware above this line will
+                  fall through to this handler.
+                </div>
+              <p></p>
+              <a class="on-no-routes on-no-middleware" href="#middleware">Add some middleware<br></a>
+              <a class="on-add-routes on-no-middleware" href="#middleware&amp;routes">Add some middleware<br></a>
+              <a class="on-no-routes on-no-middleware" href="#routes">Add some routes<br></a>
+              <a class="on-no-routes on-add-middleware" href="#middleware&amp;routes">Add some routes</a>
+            </div>
+          </div>
+        </div>
+        <div class="front-page__code__line">
+          &nbsp;
+          &nbsp;
+          <span class="front-page__code__punc">)</span>
+        </div>
+        <div class="front-page__code__line">
+          &nbsp;
+          <span class="front-page__code__punc">)</span>
+        </div>
+        <div class="front-page__code__line">
+          <span class="front-page__code__punc">];</span>
+        </div>
+      </code>
+      <a href="https://github.com/emilniklas/embla/blob/master/README.md" class="front-page__get-started-button">
+        Get started!
+      </a>
+    </main>
+  
+
+</body></html>
