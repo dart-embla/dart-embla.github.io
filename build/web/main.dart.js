@@ -3447,7 +3447,7 @@ aY:function(){var z=0,y=new P.bL(),x=1,w,v,u,t
 var $async$aY=P.cR(function(a,b){if(a===1){w=b
 z=x}while(true)switch(z){case 0:t=J
 z=2
-return P.T(W.dE("https://api.github.com/repos/emilniklas/embla",null,null).aS(C.w.gcN()),$async$aY,y)
+return P.T(W.dE("https://api.github.com/repos/dart-embla/embla",null,null).aS(C.w.gcN()),$async$aY,y)
 case 2:v=t.b2(b,"stargazers_count")
 u=document.querySelector(".header__github__bubble")
 u.textContent=H.b(v)

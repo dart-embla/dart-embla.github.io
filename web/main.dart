@@ -31,7 +31,7 @@ void modifyCodeSamples() {
 
 Future githubStarsBubble() async {
   final repoData = await HttpRequest
-    .getString('https://api.github.com/repos/emilniklas/embla')
+    .getString('https://api.github.com/repos/dart-embla/embla')
     .then(JSON.decode);
 
   final int stars = repoData['stargazers_count'];
