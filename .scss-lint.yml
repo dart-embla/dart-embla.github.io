@@ -1,0 +1,10 @@
+scss_files: "/*.scss"
+
+linters:
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
+
+  HexNotation:
+    enabled: true
+    style: uppercase

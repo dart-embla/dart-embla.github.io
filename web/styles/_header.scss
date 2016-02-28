@@ -1,0 +1,72 @@
+.header {
+  background-color: $color-green;
+  padding: p(.2) 0;
+  position: relative;
+  z-index: 10;
+}
+
+.header__container {
+  align-items: center;
+  display: flex;
+}
+
+.header__logo {
+  margin: p(1) 0;
+  padding-bottom: .1em;
+}
+
+.header__space {
+  flex: 1;
+}
+
+.header__github {
+  display: flex;
+
+  &__bubble {
+    background: $color-white;
+    border-radius: p(.3);
+    color: $color-green;
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: .05em;
+    line-height: 1;
+    margin: 6px p(1);
+    padding: p(.3) p(.4);
+    position: relative;
+    transition: .4s opacity;
+
+    &:not(.shown) {
+      opacity: 0;
+    }
+
+    &::after {
+      background-color: $color-white;
+      content: '';
+      display: block;
+      height: 10px;
+      position: absolute;
+      right: -4px;
+      top: 7px;
+      transform: rotate(45deg);
+      width: 10px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  font-family: $family-rounded;
+  font-size: 1.2em;
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+  margin-left: p(1);
+  padding: 0;
+}
+
+.menu__item {
+  color: $color-white;
+  display: inline-block;
+  padding: p(1) p(1) p(.8);
+  text-decoration: none;
+}

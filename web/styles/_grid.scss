@@ -1,0 +1,10 @@
+@function p($amount) {
+  @return $amount * 1rem;
+}
+
+.grid__container {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 p(1);
+}

@@ -1,0 +1,110 @@
+.front-page {
+  align-items: center;
+  background-color: $color-green;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 0;
+
+  button {
+    outline: 0;
+
+    &:focus {
+      box-shadow: inset 0 0 1px darken($color-green, 30%);
+    }
+  }
+}
+
+.front-page__copy {
+  font-family: $family-rounded;
+  max-width: 40em;
+  text-align: center;
+
+  h1 {
+    color: $color-white;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  p {
+    color: darken($color-green, 20%);
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: p(.6) 0 p(1.3);
+  }
+}
+
+.front-page__code {
+  background-color: $color-gray;
+  border-radius: p(1);
+  color: $color-dark-gray;
+  font-family: $family-mono;
+  font-size: .9em;
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.5;
+  min-width: 28em;
+  padding: p(1);
+
+  &__punc {
+    color: lighten($color-dark-gray, 30%);
+  }
+
+  &__keyword {
+    color: $color-blue;
+  }
+
+  &__string {
+    color: $color-green;
+  }
+}
+
+.front-page__get-started-button {
+  background: darken($color-green, 5%);
+  border: 0;
+  border-radius: p(1.8);
+  color: $color-white;
+  font-family: $family-rounded;
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1;
+  margin-top: p(1.7);
+  padding: p(1);
+  text-decoration: none;
+}
+
+.on-add-middleware {
+  display: none;
+
+  .with-middleware & {
+    display: block;
+  }
+}
+
+.on-add-routes {
+  display: none;
+
+  .with-routes & {
+    display: block;
+  }
+}
+
+.on-no-middleware {
+  .with-middleware & {
+    display: none;
+  }
+}
+
+.on-no-routes {
+  .with-routes & {
+    display: none;
+  }
+}
