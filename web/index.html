@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>Embla.io</title>
+    <script>
+      if (window.location.search.indexOf('force-http') === -1 && window.location.protocol !== "https:")
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    </script>
     <script async src="main.dart" type="application/dart"></script>
     <script async src="packages/browser/dart.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
