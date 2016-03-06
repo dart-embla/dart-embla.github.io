@@ -1,0 +1,21 @@
+<script>
+  var nav = document.querySelector('nav.navbar-fixed-top .container');
+  var emblaIoHeader = document.createElement('div');
+  emblaIoHeader.innerHTML = '' +
+    '<div class="grid__container header__container">' +
+    '  <a href="/" class="header__logo"><img src="img/logo.svg" alt="Embla"></a>' +
+    '  <ul class="menu">' +
+    '    <li class="active"><a href="/api" class="menu__item active">API</a></li>' +
+    '    <li><a href="/docs" class="menu__item">DOCS</a></li>' +
+    '  </ul>' +
+    '  <div class="header__space"></div>' +
+    '  <div class="header__github">' +
+    '    <div class="header__github__bubble shown">14</div>' +
+    '    <a href="https://github.com/dart-embla/embla">' +
+    '      <img src="img/github.svg" alt="Embla on GitHub">' +
+    '    </a>' +
+    '  </div>' +
+    '</div>';
+
+  nav.insertBefore(emblaIoHeader, nav.childNodes[0]);
+</script>
