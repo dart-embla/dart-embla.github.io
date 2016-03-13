@@ -2,9 +2,12 @@ import 'dart:io';
 import 'dart:async';
 
 import 'package:markdown/markdown.dart';
+import 'package:mustache/mustache.dart';
 
 const docsSourceDirectory = 'docs/source/';
 const docsOutputDirectory = 'build/web/docs/';
+
+final layout = new File('docs/index.hbs');
 
 main(List<String> args) {
   args.forEach((f) => new DocGenerator.fromPath(f).parse());
@@ -34,8 +37,12 @@ class DocGenerator {
 
   Future<Null> parse() async {
     await dest.create(recursive: true);
-    await source.readAsString()
-      .then(markdownToHtml)
-      .then(dest.writeAsString);
+    final html = await source.readAsString()
+      .then(markdownToHtml);
+    final templateSource = await layout.readAsString();
+
+    new Template(templateSource).render({
+      'body': html
+    }, dest.openWrite());
   }
 }

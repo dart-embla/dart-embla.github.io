@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embla Docs</title>
+    <script>
+      if (window.location.search.indexOf('force-http') === -1 && window.location.protocol !== "https:")
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script async src="/main.dart" type="application/dart"></script>
+    <script async src="/packages/browser/dart.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body class="grid">
+    <header class="header">
+      <div class="grid__container header__container">
+        <a href="/" class="header__logo"><img src="/img/logo.svg" alt="Embla"></a>
+        <ul class="menu">
+          <li><a href="/api/" class="menu__item">API</a></li>
+          <li><a href="/docs/" class="menu__item menu__item--active">DOCS</a></li>
+        </ul>
+        <div class="header__space"></div>
+        <div class="header__github">
+          <div class="header__github__bubble">
+            0
+          </div>
+          <a href="https://github.com/dart-embla/embla">
+            <img src="/img/github.svg" alt="Embla on GitHub">
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class='doc-page grid__container content-area'>
+      {{{ body }}}
+    </main>
+  </body>
+</html>
