@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the runInContext function from the http library, for the Dart programming language.">
+  <title>runInContext function - http library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <style>
+header {
+  background-color: #38C681;
+}
+.body a,
+.body a:hover,
+.body a:active,
+.body a:active {
+  color: #38C681;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">embla</a></li>
+            <li><a href="http/http-library.html">http</a></li>
+            <li class="self-crumb">runInContext</li>
+          </ol>
+          <div class="self-name">runInContext</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">embla</a></li>
+          <li><a href="http/http-library.html">http</a></li>
+          <li class="self-crumb">runInContext</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">function</span> runInContext
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="http/runInContext.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">embla</a></h5>
+    <h5><a href="http/http-library.html">http</a></h5>
+    <ol>
+    
+      <li class="section-title"><a href="http/http-library.html#typedefs">Typedefs</a></li>
+      <li><a href="http/Pipeline.html">Pipeline</a></li>
+      <li><a href="http/PipelineFactory.html">PipelineFactory</a></li>
+      <li><a href="http/ServerFactory.html">ServerFactory</a></li>
+    
+      <li class="section-title"><a href="http/http-library.html#properties">Properties</a></li>
+      <li><a href="http/context.html">context</a></li>
+      <li><a href="http/isInHttpContext.html">isInHttpContext</a></li>
+    
+      <li class="section-title"><a href="http/http-library.html#functions">Functions</a></li>
+      <li><a href="http/handler.html">handler</a></li>
+      <li><a href="http/middleware.html">middleware</a></li>
+      <li><a href="http/pipe.html">pipe</a></li>
+      <li><a href="http/pipeActual.html">pipeActual</a></li>
+      <li><a href="http/pipeIf.html">pipeIf</a></li>
+      <li><a href="http/resolveMiddleware.html">resolveMiddleware</a></li>
+      <li><a href="http/runInContext.html">runInContext</a></li>
+      <li><a href="http/setUpContextForTesting.html">setUpContextForTesting</a></li>
+    
+    
+      <li class="section-title"><a href="http/http-library.html#classes">Classes</a></li>
+      <li><a href="http/Controller-class.html">Controller</a></li>
+      <li><a href="http/HttpBootstrapper-class.html">HttpBootstrapper</a></li>
+      <li><a href="http/HttpContext-class.html">HttpContext</a></li>
+      <li><a href="http/Middleware-class.html">Middleware</a></li>
+      <li><a href="http/Request-class.html">Request</a></li>
+      <li><a href="http/Response-class.html">Response</a></li>
+      <li><a href="http/Route-class.html">Route</a></li>
+    
+      <li class="section-title"><a href="http/http-library.html#exceptions">Exceptions</a></li>
+      <li><a href="http/HttpAuthenticationTimeoutException-class.html">HttpAuthenticationTimeoutException</a></li>
+      <li><a href="http/HttpBadGatewayException-class.html">HttpBadGatewayException</a></li>
+      <li><a href="http/HttpBadRequestException-class.html">HttpBadRequestException</a></li>
+      <li><a href="http/HttpConflictException-class.html">HttpConflictException</a></li>
+      <li><a href="http/HttpException-class.html">HttpException</a></li>
+      <li><a href="http/HttpExpectationFailedException-class.html">HttpExpectationFailedException</a></li>
+      <li><a href="http/HttpFailedDependencyException-class.html">HttpFailedDependencyException</a></li>
+      <li><a href="http/HttpForbiddenException-class.html">HttpForbiddenException</a></li>
+      <li><a href="http/HttpGatewayTimeoutException-class.html">HttpGatewayTimeoutException</a></li>
+      <li><a href="http/HttpGoneException-class.html">HttpGoneException</a></li>
+      <li><a href="http/HttpImATeapotException-class.html">HttpImATeapotException</a></li>
+      <li><a href="http/HttpInsufficientStorageException-class.html">HttpInsufficientStorageException</a></li>
+      <li><a href="http/HttpInternalServerErrorException-class.html">HttpInternalServerErrorException</a></li>
+      <li><a href="http/HttpLengthRequiredException-class.html">HttpLengthRequiredException</a></li>
+      <li><a href="http/HttpLockedException-class.html">HttpLockedException</a></li>
+      <li><a href="http/HttpLoopDetectedException-class.html">HttpLoopDetectedException</a></li>
+      <li><a href="http/HttpMethodNotAllowedException-class.html">HttpMethodNotAllowedException</a></li>
+      <li><a href="http/HttpMisdirectedRequestException-class.html">HttpMisdirectedRequestException</a></li>
+      <li><a href="http/HttpNetworkAuthenticationRequiredException-class.html">HttpNetworkAuthenticationRequiredException</a></li>
+      <li><a href="http/HttpNotAcceptableException-class.html">HttpNotAcceptableException</a></li>
+      <li><a href="http/HttpNotExtendedException-class.html">HttpNotExtendedException</a></li>
+      <li><a href="http/HttpNotFoundException-class.html">HttpNotFoundException</a></li>
+      <li><a href="http/HttpNotImplementedException-class.html">HttpNotImplementedException</a></li>
+      <li><a href="http/HttpPayloadTooLargeException-class.html">HttpPayloadTooLargeException</a></li>
+      <li><a href="http/HttpPaymentRequiredException-class.html">HttpPaymentRequiredException</a></li>
+      <li><a href="http/HttpPreconditionFailedException-class.html">HttpPreconditionFailedException</a></li>
+      <li><a href="http/HttpPreconditionRequiredException-class.html">HttpPreconditionRequiredException</a></li>
+      <li><a href="http/HttpProxyAuthenticationRequiredException-class.html">HttpProxyAuthenticationRequiredException</a></li>
+      <li><a href="http/HttpRangeNotSatisfiableException-class.html">HttpRangeNotSatisfiableException</a></li>
+      <li><a href="http/HttpRequestHeaderFieldsTooLargeException-class.html">HttpRequestHeaderFieldsTooLargeException</a></li>
+      <li><a href="http/HttpRequestTimeoutException-class.html">HttpRequestTimeoutException</a></li>
+      <li><a href="http/HttpServiceUnavailableException-class.html">HttpServiceUnavailableException</a></li>
+      <li><a href="http/HttpTooManyRequestsException-class.html">HttpTooManyRequestsException</a></li>
+      <li><a href="http/HttpUnauthorizedException-class.html">HttpUnauthorizedException</a></li>
+      <li><a href="http/HttpUnprocessableEntityException-class.html">HttpUnprocessableEntityException</a></li>
+      <li><a href="http/HttpUnsupportedMediaTypeException-class.html">HttpUnsupportedMediaTypeException</a></li>
+      <li><a href="http/HttpUpgradeRequiredException-class.html">HttpUpgradeRequiredException</a></li>
+      <li><a href="http/HttpURITooLongException-class.html">HttpURITooLongException</a></li>
+      <li><a href="http/HttpVariantAlsoNegotiatesException-class.html">HttpVariantAlsoNegotiatesException</a></li>
+      <li><a href="http/HttpVersionNotSupportedException-class.html">HttpVersionNotSupportedException</a></li>
+      <li><a href="http/NoResponseFromPipelineException-class.html">NoResponseFromPipelineException</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+        <span class="returntype">dynamic</span>
+        <span class="name ">runInContext</span>(<wbr><span class="parameter" id="runInContext-param-container"><span class="type-annotation"><a href="container/IoCContainer-class.html">IoCContainer</a></span> <span class="parameter-name">container</span></span>, <span class="parameter" id="runInContext-param-body"><span class="type-annotation">dynamic</span> <span class="parameter-name">body</span>()</span>)
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">dynamic/*=T*/ runInContext/*&lt;T&gt;*/(IoCContainer container, dynamic/*=T*/ body()) {
+  return runZoned(body, zoneValues: {
+    _contextZoneValueKey: new HttpContext({
+      &apos;__container&apos;: container
+    })
+  }) as dynamic/*=T*/;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          embla 0.2.2
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- FOOTER -->
+
+
+</body>
+
+</html>

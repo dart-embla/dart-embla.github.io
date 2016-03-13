@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the StaticFilesMiddleware class from the http_basic_middleware library, for the Dart programming language.">
+  <title>StaticFilesMiddleware class - http_basic_middleware library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <style>
+header {
+  background-color: #38C681;
+}
+.body a,
+.body a:hover,
+.body a:active,
+.body a:active {
+  color: #38C681;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">embla</a></li>
+            <li><a href="http_basic_middleware/http_basic_middleware-library.html">http_basic_middleware</a></li>
+            <li class="self-crumb">StaticFilesMiddleware</li>
+          </ol>
+          <div class="self-name">StaticFilesMiddleware</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">embla</a></li>
+          <li><a href="http_basic_middleware/http_basic_middleware-library.html">http_basic_middleware</a></li>
+          <li class="self-crumb">StaticFilesMiddleware</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">class</span> StaticFilesMiddleware
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="http_basic_middleware/StaticFilesMiddleware-class.html#instance-properties">Properties</a></li>
+          <li><a href="http_basic_middleware/StaticFilesMiddleware-class.html#constructors">Constructors</a></li>
+          <li><a href="http_basic_middleware/StaticFilesMiddleware-class.html#operators">Operators</a></li>
+          <li><a href="http_basic_middleware/StaticFilesMiddleware-class.html#instance-methods">Methods</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">embla</a></h5>
+    <h5><a href="http_basic_middleware/http_basic_middleware-library.html">http_basic_middleware</a></h5>
+
+    <ol>
+    
+    
+      <li class="section-title"><a href="http_basic_middleware/http_basic_middleware-library.html#properties">Properties</a></li>
+      <li><a href="http_basic_middleware/basicMiddleware.html">basicMiddleware</a></li>
+    
+    
+    
+      <li class="section-title"><a href="http_basic_middleware/http_basic_middleware-library.html#classes">Classes</a></li>
+      <li><a href="http_basic_middleware/ConditionalMiddleware-class.html">ConditionalMiddleware</a></li>
+      <li><a href="http_basic_middleware/ErrorHandlerCollection-class.html">ErrorHandlerCollection</a></li>
+      <li><a href="http_basic_middleware/ErrorHandlerMiddleware-class.html">ErrorHandlerMiddleware</a></li>
+      <li><a href="http_basic_middleware/ForwarderMiddleware-class.html">ForwarderMiddleware</a></li>
+      <li><a href="http_basic_middleware/Input-class.html">Input</a></li>
+      <li><a href="http_basic_middleware/InputParser-class.html">InputParser</a></li>
+      <li><a href="http_basic_middleware/InputParserMiddleware-class.html">InputParserMiddleware</a></li>
+      <li><a href="http_basic_middleware/JsonInputParser-class.html">JsonInputParser</a></li>
+      <li><a href="http_basic_middleware/LoggerMiddleware-class.html">LoggerMiddleware</a></li>
+      <li><a href="http_basic_middleware/MultipartInputParser-class.html">MultipartInputParser</a></li>
+      <li><a href="http_basic_middleware/PubMiddleware-class.html">PubMiddleware</a></li>
+      <li><a href="http_basic_middleware/RawInputParser-class.html">RawInputParser</a></li>
+      <li><a href="http_basic_middleware/RemoveTrailingSlashMiddleware-class.html">RemoveTrailingSlashMiddleware</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware-class.html">StaticFilesMiddleware</a></li>
+      <li><a href="http_basic_middleware/UrlEncodedInputParser-class.html">UrlEncodedInputParser</a></li>
+    
+      <li class="section-title"><a href="http_basic_middleware/http_basic_middleware-library.html#exceptions">Exceptions</a></li>
+      <li><a href="http_basic_middleware/BadErrorHandlerOrderException-class.html">BadErrorHandlerOrderException</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    
+    <section>
+      <dl class="dl-horizontal">
+        <dt>Inheritance</dt>
+        <dd><ul class="gt-separated dark clazz-relationships">
+          <li>Object</li>
+          <li><a href="http/Middleware-class.html">Middleware</a></li>
+          <li>StaticFilesMiddleware</li>
+        </ul></dd>
+
+
+
+
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="StaticFilesMiddleware" class="callable">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/StaticFilesMiddleware.html">StaticFilesMiddleware</a></span><span class="signature">({<span class="parameter" id="-param-fileSystemPath"><span class="type-annotation">String</span> <span class="parameter-name">fileSystemPath</span>: <span class="default-value">'web'</span></span>, <span class="parameter" id="-param-serveFilesOutsidePath"><span class="type-annotation">bool</span> <span class="parameter-name">serveFilesOutsidePath</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-defaultDocument"><span class="type-annotation">String</span> <span class="parameter-name">defaultDocument</span></span>, <span class="parameter" id="-param-listDirectories"><span class="type-annotation">bool</span> <span class="parameter-name">listDirectories</span>: <span class="default-value">false</span></span>})</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="context" class="property inherited">
+          <span class="name"><a href="http/Middleware/context.html">context</a></span>
+          <span class="signature">&#8594; <a href="http/HttpContext-class.html">HttpContext</a></span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="defaultDocument" class="property">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/defaultDocument.html">defaultDocument</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="fileSystemPath" class="property">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/fileSystemPath.html">fileSystemPath</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="handler" class="property">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/handler.html">handler</a></span>
+          <span class="signature">&#8594; Handler</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>Get a hash code for this object.<a href="http_basic_middleware/StaticFilesMiddleware/hashCode.html">&hellip;</a>
+</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="listDirectories" class="property">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/listDirectories.html">listDirectories</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="serveFilesOutsidePath" class="property">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/serveFilesOutsidePath.html">serveFilesOutsidePath</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.<a href="http_basic_middleware/StaticFilesMiddleware/operator_equals.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="abort" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abort.html">abort</a></span><span class="signature">(<wbr>[<span class="parameter" id="abort-param-statusCode"><span class="type-annotation">int</span> <span class="parameter-name">statusCode</span> = <span class="default-value">500</span></span>, <span class="parameter" id="abort-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Something went wrong'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortAuthenticationTimeout" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortAuthenticationTimeout.html">abortAuthenticationTimeout</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortAuthenticationTimeout-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Authentication Timeout'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortBadGateway" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortBadGateway.html">abortBadGateway</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortBadGateway-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Bad Gateway'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortBadRequest" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortBadRequest.html">abortBadRequest</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortBadRequest-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Bad Request'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortConflict" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortConflict.html">abortConflict</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortConflict-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Conflict'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortExpectationFailed" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortExpectationFailed.html">abortExpectationFailed</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortExpectationFailed-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Expectation Failed'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortFailedDependency" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortFailedDependency.html">abortFailedDependency</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortFailedDependency-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Failed Dependency'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortForbidden" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortForbidden.html">abortForbidden</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortForbidden-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Forbidden'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortGatewayTimeout" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortGatewayTimeout.html">abortGatewayTimeout</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortGatewayTimeout-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Gateway Timeout'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortGone" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortGone.html">abortGone</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortGone-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Gone'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortImATeapot" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortImATeapot.html">abortImATeapot</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortImATeapot-param-body"><span class="parameter-name">body</span> = <span class="default-value">'I\'m a Teapot'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortInsufficientStorage" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortInsufficientStorage.html">abortInsufficientStorage</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortInsufficientStorage-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Insufficient Storage'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortInternalServerError" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortInternalServerError.html">abortInternalServerError</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortInternalServerError-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Internal Server Error'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortLengthRequired" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortLengthRequired.html">abortLengthRequired</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortLengthRequired-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Length Required'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortLocked" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortLocked.html">abortLocked</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortLocked-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Locked'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortLoopDetected" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortLoopDetected.html">abortLoopDetected</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortLoopDetected-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Loop Detected'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortMethodNotAllowed" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortMethodNotAllowed.html">abortMethodNotAllowed</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortMethodNotAllowed-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Method Not Allowed'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortMisdirectedRequest" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortMisdirectedRequest.html">abortMisdirectedRequest</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortMisdirectedRequest-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Misdirected Request'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortNetworkAuthenticationRequired" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortNetworkAuthenticationRequired.html">abortNetworkAuthenticationRequired</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortNetworkAuthenticationRequired-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Network Authentication Required'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortNotAcceptable" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortNotAcceptable.html">abortNotAcceptable</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortNotAcceptable-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Not Acceptable'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortNotExtended" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortNotExtended.html">abortNotExtended</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortNotExtended-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Not Extended'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortNotFound" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortNotFound.html">abortNotFound</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortNotFound-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Not Found'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortNotImplemented" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortNotImplemented.html">abortNotImplemented</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortNotImplemented-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Not Implemented'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortPayloadTooLarge" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortPayloadTooLarge.html">abortPayloadTooLarge</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortPayloadTooLarge-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Payload Too Large'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortPaymentRequired" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortPaymentRequired.html">abortPaymentRequired</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortPaymentRequired-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Payment Required'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortPreconditionFailed" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortPreconditionFailed.html">abortPreconditionFailed</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortPreconditionFailed-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Precondition Failed'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortPreconditionRequired" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortPreconditionRequired.html">abortPreconditionRequired</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortPreconditionRequired-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Precondition Required'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortProxyAuthenticationRequired" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortProxyAuthenticationRequired.html">abortProxyAuthenticationRequired</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortProxyAuthenticationRequired-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Proxy Authentication Required'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortRangeNotSatisfiable" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortRangeNotSatisfiable.html">abortRangeNotSatisfiable</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortRangeNotSatisfiable-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Range Not Satisfiable'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortRequestHeaderFieldsTooLarge" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortRequestHeaderFieldsTooLarge.html">abortRequestHeaderFieldsTooLarge</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortRequestHeaderFieldsTooLarge-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Request Header Fields Too Large'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortRequestTimeout" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortRequestTimeout.html">abortRequestTimeout</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortRequestTimeout-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Request Timeout'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortServiceUnavailable" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortServiceUnavailable.html">abortServiceUnavailable</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortServiceUnavailable-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Service Unavailable'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortTooManyRequests" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortTooManyRequests.html">abortTooManyRequests</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortTooManyRequests-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Too Many Requests'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortUnauthorized" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortUnauthorized.html">abortUnauthorized</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortUnauthorized-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Unauthorized'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortUnprocessableEntity" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortUnprocessableEntity.html">abortUnprocessableEntity</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortUnprocessableEntity-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Unprocessable Entity'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortUnsupportedMediaType" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortUnsupportedMediaType.html">abortUnsupportedMediaType</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortUnsupportedMediaType-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Unsupported Media Type'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortUpgradeRequired" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortUpgradeRequired.html">abortUpgradeRequired</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortUpgradeRequired-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Upgrade Required'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortURITooLong" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortURITooLong.html">abortURITooLong</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortURITooLong-param-body"><span class="parameter-name">body</span> = <span class="default-value">'URI Too Long'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortVariantAlsoNegotiates" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortVariantAlsoNegotiates.html">abortVariantAlsoNegotiates</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortVariantAlsoNegotiates-param-body"><span class="parameter-name">body</span> = <span class="default-value">'Variant Also Negotiates'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="abortVersionNotSupported" class="callable inherited">
+          <span class="name"><a href="http/Middleware/abortVersionNotSupported.html">abortVersionNotSupported</a></span><span class="signature">(<wbr>[<span class="parameter" id="abortVersionNotSupported-param-body"><span class="parameter-name">body</span> = <span class="default-value">'HTTP Version Not Supported'</span></span>])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="call" class="callable inherited">
+          <span class="name"><a href="http/Middleware/call.html">call</a></span><span class="signature">(<wbr><span class="parameter" id="call-param-innerHandler"><span class="type-annotation">Handler</span> <span class="parameter-name">innerHandler</span>(<span class="parameter" id="Handler-param-request"><span class="type-annotation"><a href="http/Request-class.html">Request</a></span> <span class="parameter-name">request</span></span>)</span>)
+            <span class="returntype parameter">&#8594; Handler</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="handle" class="callable">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/handle.html">handle</a></span><span class="signature">(<wbr><span class="parameter" id="handle-param-request"><span class="type-annotation"><a href="http/Request-class.html">Request</a></span> <span class="parameter-name">request</span></span>)
+            <span class="returntype parameter">&#8594; Future&lt;<a href="http/Response-class.html">Response</a>&gt;</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.<a href="http_basic_middleware/StaticFilesMiddleware/noSuchMethod.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="ok" class="callable inherited">
+          <span class="name"><a href="http/Middleware/ok.html">ok</a></span><span class="signature">(<wbr><span class="parameter" id="ok-param-anything"><span class="parameter-name">anything</span></span>)
+            <span class="returntype parameter">&#8594; <a href="http/Response-class.html">Response</a></span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="redirect" class="callable inherited">
+          <span class="name"><a href="http/Middleware/redirect.html">redirect</a></span><span class="signature">(<wbr><span class="parameter" id="redirect-param-location"><span class="type-annotation">String</span> <span class="parameter-name">location</span></span>)
+            <span class="returntype parameter">&#8594; <a href="http/Response-class.html">Response</a></span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="redirectPermanently" class="callable inherited">
+          <span class="name"><a href="http/Middleware/redirectPermanently.html">redirectPermanently</a></span><span class="signature">(<wbr><span class="parameter" id="redirectPermanently-param-location"><span class="type-annotation">String</span> <span class="parameter-name">location</span></span>)
+            <span class="returntype parameter">&#8594; <a href="http/Response-class.html">Response</a></span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="http_basic_middleware/StaticFilesMiddleware/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns a string representation of this object.</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>StaticFilesMiddleware</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="http_basic_middleware/StaticFilesMiddleware-class.html#constructors">Constructors</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/StaticFilesMiddleware.html">StaticFilesMiddleware</a></li>
+    
+      <li class="section-title">
+        <a href="http_basic_middleware/StaticFilesMiddleware-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="http/Middleware/context.html">context</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/defaultDocument.html">defaultDocument</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/fileSystemPath.html">fileSystemPath</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/handler.html">handler</a></li>
+      <li class="inherited"><a href="http_basic_middleware/StaticFilesMiddleware/hashCode.html">hashCode</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/listDirectories.html">listDirectories</a></li>
+      <li class="inherited"><a href="http_basic_middleware/StaticFilesMiddleware/runtimeType.html">runtimeType</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/serveFilesOutsidePath.html">serveFilesOutsidePath</a></li>
+    
+      <li class="section-title inherited"><a href="http_basic_middleware/StaticFilesMiddleware-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="http_basic_middleware/StaticFilesMiddleware/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="http_basic_middleware/StaticFilesMiddleware-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="http/Middleware/abort.html">abort</a></li>
+      <li class="inherited"><a href="http/Middleware/abortAuthenticationTimeout.html">abortAuthenticationTimeout</a></li>
+      <li class="inherited"><a href="http/Middleware/abortBadGateway.html">abortBadGateway</a></li>
+      <li class="inherited"><a href="http/Middleware/abortBadRequest.html">abortBadRequest</a></li>
+      <li class="inherited"><a href="http/Middleware/abortConflict.html">abortConflict</a></li>
+      <li class="inherited"><a href="http/Middleware/abortExpectationFailed.html">abortExpectationFailed</a></li>
+      <li class="inherited"><a href="http/Middleware/abortFailedDependency.html">abortFailedDependency</a></li>
+      <li class="inherited"><a href="http/Middleware/abortForbidden.html">abortForbidden</a></li>
+      <li class="inherited"><a href="http/Middleware/abortGatewayTimeout.html">abortGatewayTimeout</a></li>
+      <li class="inherited"><a href="http/Middleware/abortGone.html">abortGone</a></li>
+      <li class="inherited"><a href="http/Middleware/abortImATeapot.html">abortImATeapot</a></li>
+      <li class="inherited"><a href="http/Middleware/abortInsufficientStorage.html">abortInsufficientStorage</a></li>
+      <li class="inherited"><a href="http/Middleware/abortInternalServerError.html">abortInternalServerError</a></li>
+      <li class="inherited"><a href="http/Middleware/abortLengthRequired.html">abortLengthRequired</a></li>
+      <li class="inherited"><a href="http/Middleware/abortLocked.html">abortLocked</a></li>
+      <li class="inherited"><a href="http/Middleware/abortLoopDetected.html">abortLoopDetected</a></li>
+      <li class="inherited"><a href="http/Middleware/abortMethodNotAllowed.html">abortMethodNotAllowed</a></li>
+      <li class="inherited"><a href="http/Middleware/abortMisdirectedRequest.html">abortMisdirectedRequest</a></li>
+      <li class="inherited"><a href="http/Middleware/abortNetworkAuthenticationRequired.html">abortNetworkAuthenticationRequired</a></li>
+      <li class="inherited"><a href="http/Middleware/abortNotAcceptable.html">abortNotAcceptable</a></li>
+      <li class="inherited"><a href="http/Middleware/abortNotExtended.html">abortNotExtended</a></li>
+      <li class="inherited"><a href="http/Middleware/abortNotFound.html">abortNotFound</a></li>
+      <li class="inherited"><a href="http/Middleware/abortNotImplemented.html">abortNotImplemented</a></li>
+      <li class="inherited"><a href="http/Middleware/abortPayloadTooLarge.html">abortPayloadTooLarge</a></li>
+      <li class="inherited"><a href="http/Middleware/abortPaymentRequired.html">abortPaymentRequired</a></li>
+      <li class="inherited"><a href="http/Middleware/abortPreconditionFailed.html">abortPreconditionFailed</a></li>
+      <li class="inherited"><a href="http/Middleware/abortPreconditionRequired.html">abortPreconditionRequired</a></li>
+      <li class="inherited"><a href="http/Middleware/abortProxyAuthenticationRequired.html">abortProxyAuthenticationRequired</a></li>
+      <li class="inherited"><a href="http/Middleware/abortRangeNotSatisfiable.html">abortRangeNotSatisfiable</a></li>
+      <li class="inherited"><a href="http/Middleware/abortRequestHeaderFieldsTooLarge.html">abortRequestHeaderFieldsTooLarge</a></li>
+      <li class="inherited"><a href="http/Middleware/abortRequestTimeout.html">abortRequestTimeout</a></li>
+      <li class="inherited"><a href="http/Middleware/abortServiceUnavailable.html">abortServiceUnavailable</a></li>
+      <li class="inherited"><a href="http/Middleware/abortTooManyRequests.html">abortTooManyRequests</a></li>
+      <li class="inherited"><a href="http/Middleware/abortUnauthorized.html">abortUnauthorized</a></li>
+      <li class="inherited"><a href="http/Middleware/abortUnprocessableEntity.html">abortUnprocessableEntity</a></li>
+      <li class="inherited"><a href="http/Middleware/abortUnsupportedMediaType.html">abortUnsupportedMediaType</a></li>
+      <li class="inherited"><a href="http/Middleware/abortUpgradeRequired.html">abortUpgradeRequired</a></li>
+      <li class="inherited"><a href="http/Middleware/abortURITooLong.html">abortURITooLong</a></li>
+      <li class="inherited"><a href="http/Middleware/abortVariantAlsoNegotiates.html">abortVariantAlsoNegotiates</a></li>
+      <li class="inherited"><a href="http/Middleware/abortVersionNotSupported.html">abortVersionNotSupported</a></li>
+      <li class="inherited"><a href="http/Middleware/call.html">call</a></li>
+      <li><a href="http_basic_middleware/StaticFilesMiddleware/handle.html">handle</a></li>
+      <li class="inherited"><a href="http_basic_middleware/StaticFilesMiddleware/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="http/Middleware/ok.html">ok</a></li>
+      <li class="inherited"><a href="http/Middleware/redirect.html">redirect</a></li>
+      <li class="inherited"><a href="http/Middleware/redirectPermanently.html">redirectPermanently</a></li>
+      <li class="inherited"><a href="http_basic_middleware/StaticFilesMiddleware/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          embla 0.2.2
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- FOOTER -->
+
+
+</body>
+
+</html>
