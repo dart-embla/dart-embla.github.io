@@ -1,4 +1,5 @@
 packages
+!build/web/packages
 pubspec.yaml
 .packages
 .pub
