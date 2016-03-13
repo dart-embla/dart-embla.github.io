@@ -1,0 +1,38 @@
+<h1>Introduction</h1>
+<p>Embla is a server side framework for the Dart VM. It provides an extendable plugin architecture,
+as well as a robust HTTP transport plugin to itself.</p>
+<h2>Why use Embla?</h2>
+<p>Managing server side apps in Dart can be a bit of a hassle. You'll either have to do it all by
+yourself, using the built in <code>dart:io</code> library. Or you can pick and choose between all the different
+packages over at <a href="https://pub.dartlang.org">Pub</a>, to create your own set up.</p>
+<p>And there are great libraries out there. One of the most popular packages for servers is
+<a href="https://pub.dartlang.org/packages/shelf">Shelf</a>. It is a lightweight library building on the
+concept of a middleware pipeline.</p>
+<h2>Middleware Pipeline</h2>
+<p>An HTTP server works by listening to a port on its host machine. Messages sent to that port are
+shoved into the application, expecting to be sent a message back. We talk about requests and
+responses.</p>
+<p>Different requests want different things in response, and there are multiple ways in which HTTP
+specifies distinction between requests. The URI is one of them. The method (or verb) is another.</p>
+<p>When the request enters the application, it is up to the server to—depending on the
+request—delegate to the correct resource or function which will provide the correct response.</p>
+<p>Shelf talks about middleware and handlers. A handler is used to convert a Request to a Response.
+Middleware are intermediate "pipes" which can interfere with or change the request or response.</p>
+<p>Embla proposes a different, but not incompatible, concept. Think of the Embla Middleware Pipeline
+as a tree. Each end of a branch is considered a failure to deliver a response. These endpoints
+throw a <code>NoResponseFromPipelineException</code>.</p>
+<p>The branches are made up of middleware. Each middleware receives a request. It can either respond
+with a response object, or delegate to the next middleware. But it can also choose to send the
+request down a different path, a separate pipeline. This creates a new branch in the tree.</p>
+<p>In Embla, everything is a middleware! Consider a "route". No matter what kind of router you
+are used to, what it boils down to is simply a layer of indirection. Flow of control.</p>
+<p>Something like:</p>
+<pre class="dart"><code>router.add(method: 'GET', url: '/', handler: someFunction)
+</code></pre>
+<p>Can pretty easily be translated to:</p>
+<pre class="dart"><code>if (request.method == 'GET' &amp;&amp; request.url == '/') { someFunction(); }
+</code></pre>
+<p>Right?</p>
+<p>In Embla, routes can be thought of as forks in the road, with a signpost which says:
+"If your request satisfies these demands (like HTTP method or URL), go this way", otherwise,
+the route (which is a middleware) passes the request along to the next middleware.</p>
